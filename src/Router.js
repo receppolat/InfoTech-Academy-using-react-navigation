@@ -4,11 +4,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from '@screens/Login/index'
 import Register from '@screens/Register/index'
 import Home from '@screens/Home'
+import { ViewBase } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
+    <ViewBase></ViewBase>
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name='Login' component={LoginScreen}/>
