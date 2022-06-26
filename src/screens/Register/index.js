@@ -14,7 +14,6 @@ function Register({ navigation, route }) {
         else
             Alert.alert('Boş Alan Uyarısı', 'Lütfen bilgileriniz eksiksiz giriniz.')
     }
-
     return (
         <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}>
             <Input

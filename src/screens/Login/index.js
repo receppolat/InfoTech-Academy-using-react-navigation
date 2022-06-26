@@ -3,14 +3,15 @@ import React, { useState } from 'react'
 import Input from '@components/Input'
 import styles from './style';
 
-function Login({ navigation }) {
+function Login(props) {
 
     const [userName, setUserName] = useState('InfoTech');
     const [password, setPassword] = useState('');
 
+
     const handleSubmit = () => {
         if (userName && password)
-            navigation.navigate('Home', {userName});
+            props.navigation.navigate('Home');
         else
             Alert.alert('Boş Alan Uyarısı', 'Kullanıcı bilgileri eksik girildi.')
     }
