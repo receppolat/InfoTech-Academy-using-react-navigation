@@ -3,7 +3,6 @@ import React from 'react'
 import styles from './style';
 
 function PostHeader({ item }) {
-    console.log(item);
     return (
         <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', borderBottomWidth: .2}}>
             <View  style={styles.container}>
