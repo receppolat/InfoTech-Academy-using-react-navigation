@@ -2,9 +2,12 @@ import { Image, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import styles from './style'
 
-export default function index({navigation}) {
+export default function index({ navigation }) {
     const navigateToMessages = () => {
         navigation.navigate('Messages')
+    }
+    const navigateToProfile = () => {
+        navigation.navigate('Profile')
     }
     return (
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', height: '7%' }}>
@@ -13,7 +16,11 @@ export default function index({navigation}) {
                 style={styles.instagramLogo} />
             <View style={{ flexDirection: 'row' }}>
                 <Image source={require('@images/Instagram/add.png')} style={styles.icons} />
-                <Image source={require('@images/Instagram/heart.png')} style={styles.icons} />
+                <TouchableOpacity
+                onPress={navigateToProfile}
+                >
+                    <Image source={require('@images/Instagram/heart.png')} style={styles.icons} />
+                </TouchableOpacity>
                 <TouchableOpacity
                     onPress={navigateToMessages}
                 >
